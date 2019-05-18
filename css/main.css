@@ -1,0 +1,198 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #ecf6f1 repeat-x top center;
+}
+h1, h2, h3 {
+	color: #01c37b;
+}
+.start-holder {
+	width: 700px;
+	height: 300px;
+	background-color: #fff;
+	margin: 50px auto;
+	box-shadow: 0 0 3px;
+	position: relative;
+	display: none;
+}
+#startBtn {
+	padding: 0.5rem 3rem;
+	box-shadow: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	   -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	     -o-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+@-webkit-keyframes scaleDownUp {
+	50% {
+		-webkit-transform: scale(0.75);
+		transform: scale(0.75);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@keyframes scaleDownUp {
+	50% {
+		-webkit-transform: scale(0.75);
+		transform: scale(0.75);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+.countdown .counter {
+	-webkit-animation: scaleDownUp 1s ease infinite;
+	animation: scaleDownUp 1s ease infinite;
+}
+.counter {
+	margin: 0 auto;
+}
+.countdown {
+	font-size: 60px;
+	line-height: 40px;
+	text-align: center;
+	padding-top: 50px;
+	display: none;
+}
+.countdown strong {
+	margin-top: 30px;
+	background-color: #f2f2f2;
+	background-color: rgba(1, 195, 123, 0.1);
+	border: 10px solid #01c37b;
+	border-radius: 50%;
+	color: #01c37b;
+	display: inline-block;
+	font-size: 70px;
+	height: 130px;
+	line-height: 43px;
+	padding: 30px;
+	text-align: center;
+	width: 130px;
+}
+.countdown strong.blink {
+	background-color: #01c37b;
+	background-color: rgba(1, 195, 123, 0.8);
+	color: #ffffff;
+}
+.quiz {
+	width: 900px;
+	height: 700px;
+	margin: 30px auto;
+	box-shadow: 0 0 1px;
+	position: relative;
+	background-color: #fff;
+	display: block;
+}
+.categories {
+	height: 70px;
+	border-bottom: 1px solid #ddd;
+}
+.categories > div {
+	width: 140px;
+	height: 50px;
+	color: #01c37b;
+	float: left;
+	border: 1px solid #ddd;
+	margin: 10px 5px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 22px;
+}
+.categories > div:hover, .option:hover {
+	cursor: pointer;
+	background-color: #01c37b;
+	background-color: rgba(1, 195, 123, 0.8);
+	color: #fff;
+}
+#gameBarBox {
+	margin-top: 20px;
+	min-height: 90px;
+}
+.timerScoreTitle {
+	display: block;
+}
+#guessesremaining {
+	color: #f90;
+}
+#playGameBar > div {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	width: 19%;
+	font-size: 38px;
+	font-weight: 700;
+}
+.timerScoreTitle {
+	color: #a5aeba;
+	text-transform: uppercase;
+	font-size: 10px;
+	text-align: center;
+	font-weight: normal;
+	line-height: 22px;
+}
+.smallLine {
+	line-height: 98%;
+}
+#main-section {
+	width: 90%;
+	height: 70%;
+	margin: 20px auto;
+	border-top: 2px solid #ddd;
+	display: none;
+}
+header {
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+.options {
+	margin: 10px 10px;
+	margin-top: 115px;
+}
+.option {
+	width: 310px;
+	height: 80px;
+	border: 1px solid #ddd;
+	float: left;
+	margin: 40px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 28px;
+	color: #01c37b;
+}
+.btn:hover, .btn:focus {
+	box-shadow: none;
+}
+.result {
+	font-size: 48px;
+	display: block;
+	text-align: center;
+	line-height: 300px;
+}
+.timeUp {
+	font-size: 48px;
+	display: block;
+	text-align: center;
+	color: tomato;
+	margin-top: 100px;
+}
+#startAgainBtn {
+	margin-top: -250px;
+	display: none;
+}
+#scoreDiv {
+	width: 90%;
+	height: 70%;
+	margin: 20px auto;
+	border-top: 2px solid #ddd;
+	display: none;
+}

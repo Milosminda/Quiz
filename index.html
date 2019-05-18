@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <title>Quiz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <!-- Wrapp -->
+    <div id="wrapp">
+      <!-- Quiz -->
+      <div class="quiz">
+        <!-- Categories -->
+        <div class="categories">
+          <div class="showQuiz" id="geography" onclick="runGeo();">Geography</div>
+          <div class="showQuiz" id="physics" onclick="runPhysics();">Physics</div>
+          <div class="showQuiz" id="biology" onclick="runBiology();">Biology</div>
+          <div class="showQuiz" id="mathematics" onclick="runMathematics();">Mathematics</div>
+          <div class="showQuiz" id="informatics" onclick="runInformatics();">Informatics</div>
+          <div class="showQuiz" id="programming" onclick="runProgramming();">Programming</div>
+        </div>
+        <!-- Categories END -->
+        <!-- Game Bar Box -->
+        <div id="gameBarBox">
+          <div id="playGameBar">
+            <div id="remainingBox" class="smallLine">
+              <span class="timerScoreTitle">Questions remaining</span>
+              <span id="guessesremaining">0</span>
+            </div>
+            <div id="correctBox" class="smallLine">
+              <span class="timerScoreTitle">Correct</span>
+              <span id="correctNum">0</span>
+            </div>
+            <div id="wrongBox" class="smallLine">
+              <span class="timerScoreTitle">Wrong</span>
+              <span id="wrongNum">0</span>
+            </div>
+            <div id="scoreBox" class="smallLine">
+              <span class="timerScoreTitle">Score</span>
+              <span id="currentScore"><span id="curQuestion">0</span>/<span class="score">0</span></span>
+            </div>
+            <div id="timeBox" class="smallLine">
+              <span class="timerScoreTitle">Timer</span>
+              <span id="time">00:00</span>
+            </div>
+          </div>
+        </div>
+        <!-- Game Bar Box -->
+        <section id="main-section">
+          <header>
+            <h1 id="titleHolder"></h1>
+          </header>
+          <div class="options row">
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+          </div>
+        </section>
+        <!-- Score Div -->
+        <div id="scoreDiv"></div>
+          <div class="col-sm-4 offset-4">
+            <button id="startAgainBtn" class="btn btn-lg btn-primary form-control">Start Again</button>
+          </div>
+        <!-- Score Div END -->
+        <!-- Start Holder -->
+        <div class="start-holder">
+          <button id="startBtn" class="btn btn-lg btn-success">Play quiz</button>
+          <div class="countdown">
+            <h3 id="gogogo">Are you ready?</h3>
+            <strong class="counter"></strong>
+          </div>
+        </div>
+        <!-- Start Holder END -->
+      </div>
+      <!-- Quiz END -->
+    </div>
+    <!-- Wrapp -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
