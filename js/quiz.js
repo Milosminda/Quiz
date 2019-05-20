@@ -15,9 +15,9 @@ class Quiz {
 	getQuestion() {
     return this.geography[this.index];
 	}
-/*  getCategory() {
+  getCategory() {
     return this.getQuestion().category; // Da se izvuce kategorija
-  }*/
+  }
 	randomize() {
 		let copyArray = [].concat(this.getQuestion().options);
 		let rand = [];
@@ -40,6 +40,7 @@ class Quiz {
       this.wrongScore++;
       wrongNum.innerHTML = this.wrongScore;
       wrongNum.style.color = '#e0777b';
+      wrongArray.push(this.getQuestion().text);
     }
 		this.index++;
 	}
@@ -54,4 +55,5 @@ const biologyQuiz = new Quiz(biology);
 const mathematicsQuiz = new Quiz(mathematics);
 const informaticsQuiz = new Quiz(informatics);
 const programmingQuiz = new Quiz(programming);
-const allQuizzes= [geographyQuiz, physicsQuiz, biologyQuiz, mathematicsQuiz, informaticsQuiz, programmingQuiz];
+const allQuizzes = [geographyQuiz, physicsQuiz, biologyQuiz, mathematicsQuiz, informaticsQuiz, programmingQuiz];
+
