@@ -24,7 +24,10 @@ let startAgainBtn = document.querySelector('#startAgainBtn');
 let curQuestion = document.querySelector('#curQuestion');
 let showQuiz = document.querySelectorAll('.showQuiz');
 let scoreDiv = document.querySelector('#scoreDiv');
+let wrongArrayId = document.querySelector('#wrongArrayId');
 var loop;
+var wrongArray = [];
+var cur = 1;
 // ....
 var runningGeo = false;
 var runningPhys = false;
@@ -48,6 +51,9 @@ for (let i = 0; i < showQuiz.length; i++) {
 			wrongNum.innerHTML = '0';
 			curQuestion.innerHTML = '0';
 			time.innerHTML = '0';
+			wrongArray = [];
+			cur = 1;
+			wrongArrayId.innerHTML = '';
 			clearInterval(loop);
 			for (let k = 0; k < allQuizzes.length; k++) {
 				allQuizzes[k].index = 0;
@@ -138,6 +144,9 @@ function runGeo() {
 			mainSection.style.display = 'none';
 			scoreDiv.style.display = 'block';
 			scoreDiv.innerHTML = `<h3 class="result">Vas rezultat je: ${geographyQuiz.score}<h3>`;
+		for (var i = 0; i < wrongArray.length; i++) {
+				wrongArrayId.innerHTML += `<div class="wrongArray">${cur++}. ${wrongArray[i]} <br></div>`;
+			};
 			startAgainBtn.style.display = 'block';
 		if (score.innerHTML == geography.length) {
 			clearInterval(loop);
@@ -163,6 +172,9 @@ function runPhysics() {
 			mainSection.style.display = 'none';
 			scoreDiv.style.display = 'block';
 			scoreDiv.innerHTML = `<h3 class="result">Vas rezultat je: ${physicsQuiz.score}<h3>`;
+		for (var i = 0; i < wrongArray.length; i++) {
+				wrongArrayId.innerHTML += `<div class="wrongArray">${cur++}. ${wrongArray[i]} <br></div>`;
+			};
 			startAgainBtn.style.display = 'block';
 		if (score.innerHTML == physics.length) {
 			clearInterval(loop);
@@ -189,6 +201,9 @@ function runBiology() {
 			scoreDiv.style.display = 'block';
 			scoreDiv.innerHTML = `<h3 class="result">Vas rezultat je: ${biologyQuiz.score}<h3>`;
 			startAgainBtn.style.display = 'block';
+			for (var i = 0; i < wrongArray.length; i++) {
+				wrongArrayId.innerHTML += `<div class="wrongArray">${cur++}. ${wrongArray[i]} <br></div>`;
+			};
 		if (score.innerHTML == biology.length) {
 			clearInterval(loop);
 		}
@@ -214,6 +229,9 @@ function runMathematics() {
 			scoreDiv.style.display = 'block';
 			scoreDiv.innerHTML = `<h3 class="result">Vas rezultat je: ${mathematicsQuiz.score}<h3>`;
 			startAgainBtn.style.display = 'block';
+			for (var i = 0; i < wrongArray.length; i++) {
+				wrongArrayId.innerHTML += `<div class="wrongArray">${cur++}. ${wrongArray[i]} <br></div>`;
+			};
 		if (score.innerHTML == mathematics.length) {
 			clearInterval(loop);
 		}
@@ -239,6 +257,9 @@ function runInformatics() {
 			scoreDiv.style.display = 'block';
 			scoreDiv.innerHTML = `<h3 class="result">Vas rezultat je: ${informaticsQuiz.score}<h3>`;
 			startAgainBtn.style.display = 'block';
+			for (var i = 0; i < wrongArray.length; i++) {
+				wrongArrayId.innerHTML += `<div class="wrongArray">${cur++}. ${wrongArray[i]} <br></div>`;
+			};
 		if (score.innerHTML == informatics.length) {
 			clearInterval(loop);
 		}
@@ -264,6 +285,9 @@ function runProgramming() {
 			scoreDiv.style.display = 'block';
 			scoreDiv.innerHTML = `<h3 class="result">Vas rezultat je: ${programmingQuiz.score}<h3>`;
 			startAgainBtn.style.display = 'block';
+			for (var i = 0; i < wrongArray.length; i++) {
+				wrongArrayId.innerHTML += `<div class="wrongArray">${cur++}. ${wrongArray[i]} <br></div>`;
+			};
 		if (score.innerHTML == programming.length) {
 			clearInterval(loop);
 		}

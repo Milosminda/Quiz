@@ -196,3 +196,13 @@ header {
 	border-top: 2px solid #ddd;
 	display: none;
 }
+#wrongArrayId {
+	margin-top: 20px;
+	text-align: center;
+	max-height: 150px;
+	color: tomato;
+	overflow-y: auto;
+}
+.wrongArray {
+	margin: 5px 0px;
+}

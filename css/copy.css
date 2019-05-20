@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #ecf6f1 repeat-x top center;
+}
+h1, h2, h3 {
+	color: #01c37b;
+}
+.quiz {
+	width: 900px;
+	height: 700px;
+	margin: 50px auto;
+	box-shadow: 0 0 1px;
+	position: relative;
+	background-color: #fff;
+}
+.countdown {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	   -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	     -o-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+header {
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-bottom: 2px solid #ddd;
+}
+#category {
+	position: absolute;
+}
+.category {
+	width: 150px;
+	height: 50px;
+	float: left;
+	margin: 10px;
+	border: 1px solid #ddd;
+	margin-top: 100px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 24px;
+	color: #01c37b;
+}
+#ready-holder {
+	display: none;
+}
+#ready {
+	position: absolute;
+	top: 25%;
+	left: 37%;
+}
+#ready h3 {
+	font-size: 36px;
+	font-weight: 400;
+}
+.options {
+	margin-top: 250px;
+	margin-left: 40px;
+}
+.option {
+	width: 200px;
+	height: 120px;
+	line-height: 120px;
+	margin: 10px 50px;
+	border: 1px solid #ddd;
+	text-align: center;
+	font-size: 28px;
+	float: left;
+	color: #01c37b;
+}
+.option:hover, .category:hover {
+	cursor: pointer;
+	background-color: #01c37b;
+	background-color: rgba(1, 195, 123, 0.8);
+	color: #fff;
+}
+@-webkit-keyframes scaleDownUp {
+	50% {
+		-webkit-transform: scale(0.75);
+		transform: scale(0.75)
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+@keyframes scaleDownUp {
+	50% {
+		-webkit-transform: scale(0.75);
+		transform: scale(0.75)
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+.countdown .counter {
+	-webkit-animation: scaleDownUp 1s ease infinite;
+	animation: scaleDownUp 1s ease infinite;
+}
+.countdown {
+	font-size: 60px;
+	line-height: 40px;
+	text-align: center
+}
+.countdown strong {
+	background-color: #f2f2f2;
+	background-color: rgba(1, 195, 123, 0.1);
+	border: 10px solid #01c37b;
+	border-radius: 50%;
+	color: #01c37b;
+	display: inline-block;
+	font-size: 70px;
+	height: 130px;
+	line-height: 43px;
+	padding: 30px;
+	text-align: center;
+	width: 130px
+}
+.countdown strong.blink {
+	background-color: #01c37b;
+	background-color: rgba(1, 195, 123, 0.8);
+	color: #ffffff
+}
